@@ -1,0 +1,75 @@
+<div class="container" fxLayout="row" fxLayout.md="column" fxLayout.xs="column" fxLayoutAlign.gt-md="space-around center" fxLayoutGap="10px">
+
+
+    <mat-card *ngIf="dish" fxFlex [@expand]>
+        <mat-card-header>
+            <div mat-card-avatar></div>
+            <mat-card-title>
+                <h3>{{dish.name | uppercase}}</h3>
+            </mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="https://www.indianveggiedelight.com/wp-content/uploads/2017/05/thumb_paneer_uttapam.jpg" alt="{{dish.name}}">
+        <mat-card-content>
+            <p>This is dish description
+            </p>
+        </mat-card-content>
+    </mat-card>
+    <!-- <div [hidden]="dish || dishErrMess ">
+        <mat-spinner></mat-spinner>
+        <h4>Loading . . . Please Wait</h4>
+    </div> -->
+    <!-- <div fxFlex *ngIf="dishErrMess ">
+        <h2>Error</h2>
+        <h4>{{dishErrMess}}</h4>
+    </div> -->
+
+
+
+    <mat-card *ngIf="promotion " fxFlex [@expand]>
+        <mat-card-header>
+            <div mat-card-avatar></div>
+            <mat-card-title>
+                <h3>{{promotion.name | uppercase}}</h3>
+            </mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src=" https://ventadesign.com/wp-content/uploads/2019/01/ventadesign-stage-buffet-setup-02.jpg ">
+        <mat-card-content>
+            <p>Promotion Description
+            </p>
+        </mat-card-content>
+    </mat-card>
+    <!-- <div [hidden]="promotion || promotionErrMess ">
+        <mat-spinner></mat-spinner>
+        <h4>Loading . . . Please Wait</h4>
+    </div> -->
+    <!-- <div fxFlex *ngIf="promotionErrMess ">
+        <h2>Error</h2>
+        <h4>{{promotionErrMess}}</h4>
+    </div> -->
+
+
+
+    <mat-card *ngIf="featureLeaders " fxFlex [@expand]>
+        <mat-card-header>
+            <div mat-card-avatar></div>
+            <mat-card-title>
+                <h3>{{featureLeaders.name | uppercase}}</h3>
+            </mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src=" https://qtxasset.com/2017-07/Remus%20Palimaru_Hotel%20Manager_Headshot.jpg?bAjUtNc0gR8hGeHWeQxiwl7UjFg8glHR ">
+        <mat-card-content>
+            <p>Leader Description
+            </p>
+        </mat-card-content>
+
+    </mat-card>
+    <!-- <div [hidden]="featureLeaders || featureLeadersErrMess ">
+        <mat-spinner></mat-spinner>
+        <h4>Loading . . . Please Wait</h4>
+    </div> -->
+    <!-- <div fxFlex *ngIf="featureLeadersErrMess ">
+        <h2>Error</h2>
+        <h4>{{featureLeadersErrMess}}</h4>
+    </div> -->
+
+</div>
