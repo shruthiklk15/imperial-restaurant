@@ -16,9 +16,18 @@ import {MatListModule} from '@angular/material/list';
 import { MenuComponent } from './menu/menu.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule , FormsModule } from '@angular/forms';
 import { NgxStarRatingModule } from 'ngx-star-rating';
 import { ContactComponent } from './contact/contact.component';
+import {  MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { LoginComponent } from './login/login.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+// import { FormBuilderModule } from 'angular-form-builder';
+
+
+// import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -29,7 +38,8 @@ import { ContactComponent } from './contact/contact.component';
     AboutComponent,
     MenuComponent,
     DishdetailComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent
 
   ],
   imports: [
@@ -43,7 +53,13 @@ import { ContactComponent } from './contact/contact.component';
     HttpClientModule,
     MatListModule,
     MatGridListModule,
-    NgxStarRatingModule
+    NgxStarRatingModule,
+    MatSlideToggleModule,
+    MatFormFieldModule,
+    // FormBuilderModule,
+    FormsModule,
+    MatDialogModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

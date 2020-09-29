@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { from, Observable } from 'rxjs';
-import { myBaseURL } from '../shared/myBaseURL';
+import { Observable } from 'rxjs';
+import { myBaseUniformResourceLocator } from '../shared/myBaseUniformResourceLocator';
 import { Dish } from '../shared/dish';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { map, catchError } from 'rxjs/operators';
@@ -15,22 +15,22 @@ export class DishService {
   constructor(private http: HttpClient, private processHTTPMsgService: ProcessHttpmsgService) { }
 
   updateDishDetails(dish: Dish): Observable<Dish> {
-    return this.http.put<Dish>(myBaseURL + 'dishes', dish);
+    return this.http.put<Dish>(myBaseUniformResourceLocator + 'dishes', dish);
   }
 
   getDishes(): Observable<Dish[]> {
-    return this.http.get<Dish[]>(myBaseURL + 'dishes')
+    return this.http.get<Dish[]>(myBaseUniformResourceLocator + 'dishes')
       .pipe(catchError(this.processHTTPMsgService.handleError));
   }
 
   getDish(id: any): Observable<Dish> {
-    return this.http.get<Dish>(myBaseURL + 'dishes/' + id)
+    return this.http.get<Dish>(myBaseUniformResourceLocator + 'dishes/' + id)
       .pipe(catchError(this.processHTTPMsgService.handleError));
   }
 
   getFeaturedDish(): Observable<Dish> {
     // alert('I am in getFeaturedDish dish service');
-    return this.http.get<Dish[]>(myBaseURL + 'dishes?featured=true')
+    return this.http.get<Dish[]>(myBaseUniformResourceLocator + 'dishes?featured=true')
       .pipe(map(dishes => dishes[0]))
       .pipe(catchError(this.processHTTPMsgService.handleError));
   }
@@ -47,7 +47,7 @@ export class DishService {
         'Content-Type': 'application/json'
       })
     };
-    return this.http.put<Dish>(myBaseURL + 'dishes/' + dish.id, dish, httpOptions)
+    return this.http.put<Dish>(myBaseUniformResourceLocator + 'dishes/' + dish.id, dish, httpOptions)
       .pipe(catchError(this.processHTTPMsgService.handleError));
 
   }

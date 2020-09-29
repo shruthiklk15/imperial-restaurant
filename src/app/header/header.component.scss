@@ -22,3 +22,13 @@ $background-moredark: #4527A0;
 .container {
     width: 1263px;
 }
+
+.mat-toolbar-single-row {
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 16px;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+}

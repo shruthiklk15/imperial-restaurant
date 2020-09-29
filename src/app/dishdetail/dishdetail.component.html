@@ -35,7 +35,6 @@
                     </p>
                 </mat-list-item>
                 <!-- Form here -->
-                <!-- <mat-list-item *ngIf="commentForm"> -->
                 <form [formGroup]="commentForm" (ngSubmit)="onSubmit()">
                     <div>
                         <div class="form-group">
@@ -45,65 +44,26 @@
                                    <span *ngIf = "commentForm.get('author').errors['required']">Author name is required</span>
                             </span>
                         </div>
-
                         <div class="form-group">
                             <label for="comment">Comment</label>
                             <textarea matInput class="form-control" formControlName="comment" placeholder="Your Comment" rows="2" cols="70" required>
                                     <span class="help-block" *ngIf="!commentForm.get('comment').valid&&commentForm.get('comment').touched">
                                         <span *ngIf = "commentForm.get('comment').errors['required']">Please give your review on this Dish</span>
                                     </span>
-                                </textarea>
-                            <!-- <input type="text" class="form-control" id="comment" formControlName="comment"> -->
+                            </textarea>
                         </div>
-                        <!-- <div class="form-group">
-                            <label for="rating">Rating</label>
-                            <star-rating value="5" totalstars="5" checkedcolor="red" uncheckedcolor="black" size="24px" readonly="false" (rate)="onRate($event)"></star-rating>
-                            <span class="help-block" *ngIf="!commentForm.get('rating').valid&&commentForm.get('rating').touched">
-                                   <span *ngIf = "commentForm.get('rating').errors['required']">Please rate this dish</span>
-                            </span>
-                        </div> -->
                         <form [formGroup]="form">
                             <div class="cont">
                                 <div class="stars">
                                     <ngx-star-rating formControlName="rating1" [id]="'rating'"></ngx-star-rating>
                                     <div>Rating: {{form.value.rating1}}</div>
                                 </div>
-                                <!-- <p>form is valid: {{ form.valid ? 'true' : 'false' }}</p> -->
                             </div>
                         </form>
-
-
-
-
-                        <!-- <div class="form-group">
-                             <label for="email">Email</label>
-                             <input type="email" class="form-control" 
-                             id="email" formControlName = "email">
-                
-                             <span class="help-block" *ngIf="!commentForm.get('userData.email').valid && commentForm.get('userData.email').touched">
-                              please enter a valid email id 
-                             </span>
-                          </div> -->
                     </div>
-
-                    <!--                 
-                        <div class="radio" *ngFor="let gender of genders">
-                          <label>
-                            <input type="radio" [value]="gender"
-                            formControlName = "gender">{{gender}}
-                          </label>
-                        </div> -->
-
-
-
-                    <!-- <span class="help-block" *ngIf="!commentForm.valid && commentForm.touched">
-                             please enter valid data
-                           </span> -->
-
                     <button class="btn btn-primary" type="submit">Submit</button>
                     <button class="btn btn-primary" (click)="reset()">Reset</button>
                 </form>
-                <!-- </mat-list-item> -->
             </mat-list>
         </div>
     </div>

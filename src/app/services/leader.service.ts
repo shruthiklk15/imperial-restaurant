@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
 import {Leader} from '../shared/leader';
-import {LEADERS} from '../shared/leaders';
-import { map, catchError, delay } from 'rxjs/operators';
-import { from, Observable, of } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { myBaseURL } from '../shared/myBaseURL';
+import { myBaseUniformResourceLocator } from '../shared/myBaseUniformResourceLocator';
 import { ProcessHttpmsgService } from './process-httpmsg.service' ;
 
 @Injectable({
@@ -15,7 +14,7 @@ export class LeaderService {
   constructor(private http: HttpClient, private processHTTPMsgService: ProcessHttpmsgService) { }
   getLeaders(): Observable<Leader[]> {
   // return of(LEADERS).pipe(delay(2000));
-  return this.http.get<Leader[]>(myBaseURL + 'leadership');
+  return this.http.get<Leader[]>(myBaseUniformResourceLocator + 'leadership');
     // .pipe(catchError(this.processHTTPMsgService.handleError));
   }
   getLeader(id: any): Observable<Leader> {
@@ -24,7 +23,7 @@ export class LeaderService {
     //     setTimeout(() => resolve(LEADERS.filter((leader) => (leader.id == id))[0]), 2000);
     // });
     // return of(LEADERS.filter((leader) => (leader.id === id))[0]).pipe(delay(2000));
-    return this.http.get<Leader>(myBaseURL + 'leadership/' + id);
+    return this.http.get<Leader>(myBaseUniformResourceLocator + 'leadership/' + id);
     // .pipe(catchError(this.processHTTPMsgService.handleError));
   }
 
@@ -36,7 +35,7 @@ export class LeaderService {
 
   // return of(LEADERS.filter((leader) => leader.featured)[0]).pipe(delay(2000));
 
-    return this.http.get<Leader>(myBaseURL + 'leadership?featured=true')
+    return this.http.get<Leader>(myBaseUniformResourceLocator + 'leadership?featured=true')
     .pipe(map(leadership => leadership[0]));
     // .pipe(catchError(this.processHTTPMsgService.handleError));
   }
