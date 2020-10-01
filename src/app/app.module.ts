@@ -16,6 +16,7 @@ import {MatListModule} from '@angular/material/list';
 import { MenuComponent } from './menu/menu.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
+<<<<<<< HEAD
 import { ReactiveFormsModule , FormsModule } from '@angular/forms';
 import { NgxStarRatingModule } from 'ngx-star-rating';
 import { ContactComponent } from './contact/contact.component';
@@ -28,6 +29,11 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
 // import { from } from 'rxjs';
+=======
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgxStarRatingModule } from 'ngx-star-rating';
+import { ContactComponent } from './contact/contact.component';
+>>>>>>> 14b885770bb29a3543906d741567130c7d004272
 
 @NgModule({
   declarations: [
@@ -38,8 +44,12 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     AboutComponent,
     MenuComponent,
     DishdetailComponent,
+<<<<<<< HEAD
     ContactComponent,
     LoginComponent
+=======
+    ContactComponent
+>>>>>>> 14b885770bb29a3543906d741567130c7d004272
 
   ],
   imports: [
@@ -53,6 +63,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     HttpClientModule,
     MatListModule,
     MatGridListModule,
+<<<<<<< HEAD
     NgxStarRatingModule,
     MatSlideToggleModule,
     MatFormFieldModule,
@@ -60,6 +71,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     FormsModule,
     MatDialogModule,
     MatCheckboxModule
+=======
+    NgxStarRatingModule
+>>>>>>> 14b885770bb29a3543906d741567130c7d004272
   ],
   providers: [],
   bootstrap: [AppComponent]

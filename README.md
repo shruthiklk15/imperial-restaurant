@@ -1,7 +1,10 @@
 # Confusing
 
+<<<<<<< HEAD
 Read me first
 
+=======
+>>>>>>> 14b885770bb29a3543906d741567130c7d004272
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
 
 ## Development server

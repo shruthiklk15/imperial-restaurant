@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Feedback } from '../shared/feedback';
+=======
+>>>>>>> 14b885770bb29a3543906d741567130c7d004272
 
 @Component({
   selector: 'app-contact',
@@ -8,6 +11,7 @@ import { Feedback } from '../shared/feedback';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+<<<<<<< HEAD
   feedbackForm: FormGroup;
   aftersubmitting = 'Form Submitted Successfully';
   constructor() { }
@@ -51,3 +55,12 @@ export class ContactComponent implements OnInit {
 }
 
 
+=======
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}
+>>>>>>> 14b885770bb29a3543906d741567130c7d004272

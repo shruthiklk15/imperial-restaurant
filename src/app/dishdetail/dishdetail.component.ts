@@ -44,6 +44,10 @@ export class DishdetailComponent implements OnInit {
       Validators.minLength(1)]),
       comment: new FormControl(null, [Validators.required]),
       author: new FormControl(null, [Validators.required])
+<<<<<<< HEAD
+=======
+      // date: new FormControl(null, [Validators.required])
+>>>>>>> 14b885770bb29a3543906d741567130c7d004272
     });
     this.commentForm.setValue({
       rating: 5,

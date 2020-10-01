@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { MatDialog } from '@angular/material/dialog';
 import { LoginComponent } from '../login/login.component';
+=======
+>>>>>>> 14b885770bb29a3543906d741567130c7d004272
 
 @Component({
   selector: 'app-header',
@@ -9,6 +12,7 @@ import { LoginComponent } from '../login/login.component';
 })
 export class HeaderComponent implements OnInit {
 
+<<<<<<< HEAD
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -18,3 +22,11 @@ export class HeaderComponent implements OnInit {
   }
 }
 
+=======
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}
+>>>>>>> 14b885770bb29a3543906d741567130c7d004272
